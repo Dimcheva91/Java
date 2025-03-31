@@ -1,9 +1,9 @@
 import java.util.Scanner;
 
-public class WeekendОrWorkingDay {
+public class WeekendOrWorkingDay {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
+        Scanner scanner = new Scanner(System.in);
         String day = scanner.nextLine();
 
         switch (day) {
@@ -20,8 +20,6 @@ public class WeekendОrWorkingDay {
                 break;
             default:
                 System.out.println("Error");
-                break;
         }
     }
-
 }

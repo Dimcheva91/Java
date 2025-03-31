@@ -9,14 +9,12 @@ public class GodzillaVsKong {
         double pricePerStatist = Double.parseDouble(scanner.nextLine());
 
         double priceDecor = budget * 0.1;
-        //цена статист
         double priceStatistAll = countStatist * pricePerStatist;
         if (countStatist > 150) {
-            priceStatistAll = priceStatistAll - 0.1 * priceStatistAll; // 0.9 * priceStatistAll
+            priceStatistAll = priceStatistAll - (0.1 * priceStatistAll);
         }
-        double expenses = priceDecor + priceStatistAll;  // разходи
-        //бюджета да стига
-        if (budget >= expenses){
+        double expenses = priceDecor + priceStatistAll;
+        if (budget >= expenses) {
             System.out.println("Action!");
             double leftMoney = budget - expenses;
             System.out.printf("Wingard starts filming with %.2f leva left.", leftMoney);

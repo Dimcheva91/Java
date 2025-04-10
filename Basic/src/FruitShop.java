@@ -46,7 +46,6 @@ public class FruitShop {
             return;
         }
 
-        // Print result
         System.out.printf("%.2f", price * quantity);
 
 

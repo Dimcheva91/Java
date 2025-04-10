@@ -8,16 +8,32 @@ public class Cinema {
         double rows = Double.parseDouble(scanner.nextLine());
         double colums = Double.parseDouble(scanner.nextLine());
 
-        double price = Double.parseDouble(scanner.nextLine());
+        double price = 0;
 
-        price = switch (cinema) {
-            case "Premiere" -> rows * colums * 12;
-            case "Normal" -> rows * colums * 7.5;
-            case "Discount" -> rows * colums * 5;
-            default -> price;
-        };
+//        if (cinema.equals("Premiere"))   {
+//            price = (colums * rows) * 12;
+//            System.out.printf("%.2f", price);
+//        } else if (cinema.equals("Normal")) {
+//            price = (rows * colums) * 7.5;
+//            System.out.printf("%.2f leva", price);
+//        } else if (cinema.equals("Discout")) {
+//            price = (rows * colums) * 5.;
+//            System.out.printf("%.2f leva", price);
 
-        System.out.printf("%.2f leva", price);
+        if (cinema.equals("Premiere")) {
+            price = (colums * rows) * 12;
+            System.out.printf("%.2f" , price);
+            System.out.println(" leva");
+        } else if (cinema.equals("Normal")) {
+            price = (colums * rows) * 7.5;
+            System.out.printf("%.2f", price);
+            System.out.println(" leva");
+        } else if (cinema.equals("Discount")) {
+            price = (colums * rows) * 5;
+            System.out.printf("%.2f", price);
+            System.out.println(" leva");
+
+        }
     }
 }
 

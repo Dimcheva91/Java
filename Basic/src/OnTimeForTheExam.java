@@ -16,24 +16,22 @@ public class OnTimeForTheExam {
         if ((arriveTimeMinutes > examTimeMinutes)) {
             System.out.println("Late");
             int lateMinutes = arriveTimeMinutes - examTimeMinutes;
-            if(lateMinutes < 60) {
+            if (lateMinutes < 60) {
                 System.out.printf("%d minutes after the start", lateMinutes);
             } else {
                 int hour = lateMinutes / 60;
                 int minutes = lateMinutes % 60;
                 System.out.printf("%d:%02d hours after the start", hour, minutes);
             }
-            //on time   10:10      9:25
         } else if ((arriveMinutes == examTimeMinutes || examTimeMinutes - arriveTimeMinutes <= 30)) {
             System.out.println("On time");
             if (examTimeMinutes - arriveTimeMinutes <= 30 && arriveTimeMinutes != examTimeMinutes) {
                 System.out.printf("%d minutes before the start", examTimeMinutes - arriveTimeMinutes);
             }
-            //early
         } else if (examTimeMinutes - arriveTimeMinutes > 30) {
             System.out.println("Early");
             int earlyMinutes = examTimeMinutes - arriveTimeMinutes;
-            if(earlyMinutes <60) {
+            if (earlyMinutes < 60) {
                 System.out.printf("%d minutes before the start", earlyMinutes);
             } else {
                 int hour = earlyMinutes / 60;

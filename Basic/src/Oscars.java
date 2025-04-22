@@ -10,6 +10,8 @@ public class Oscars {
         double academyPoints = Double.parseDouble(scanner.nextLine());
         double quantityJury = Double.parseDouble(scanner.nextLine());
 
+        double maxPoints = 1250.5;
+
         double countPoints = 0;
 
         for (int index = 1; index <= quantityJury; index++) {
@@ -20,13 +22,13 @@ public class Oscars {
             countPoints = (academyPoints + (juryName.length() * pointsFromJury) / 2);
             academyPoints = +countPoints;
 
-            if (academyPoints >= 1250.5) {
+            if (academyPoints >= maxPoints) {
                 break;
             }
         }
 
-        if (countPoints < 1250.5) {
-            double neededPoints = 1250.5 - countPoints;
+        if (countPoints < maxPoints) {
+            double neededPoints = maxPoints - countPoints;
             System.out.printf("Sorry, %s you need %.1f more!", actorName, neededPoints);
         } else {
             System.out.printf("Congratulations, %s got a nominee for leading role with %.1f!", actorName, countPoints);

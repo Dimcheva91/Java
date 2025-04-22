@@ -12,14 +12,14 @@ public class CleverLily {
 
         double toyCount = 0;
         double savedMoney = 0;
-        int money = 10;
+        int moneyGift = 10;
         double brotherTaken = 0;
 
         for (int index = 1; index <= ageLilly; index++) {
 
             if (index % 2 == 0) {
-                savedMoney += money;
-                money += 10;
+                savedMoney += moneyGift;
+                moneyGift += 10;
                 brotherTaken++;
             } else {
              toyCount++;
